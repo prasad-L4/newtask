@@ -37,6 +37,18 @@ text-transform: capitalize;
     flex-direction: column;
     align-items: center;
 }
+.head h2{
+    color: #FFF;
+
+    text-align: center;
+    font-family: 'Roboto', sans-serif;;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 100!important;
+    line-height: 48px; 
+    letter-spacing: 0.96px;
+    text-transform: capitalize; 
+}
 head p{
     width: 60%!important;
     text-align: center;
@@ -128,6 +140,7 @@ font-size: 28px;
 font-style: normal;
 font-weight: 300;
 line-height: normal;
+
 }
 .footer span{
     font-weight: bold;
@@ -178,16 +191,28 @@ line-height: 26px;
         !important;
        
     }
+    .head p{
+        width: 100%!important;
+        padding: 0;
+    
+    }
+    .head img{
+   
+    }
     .btn{
         width: 80%;
     }
     .cards img{
         width: 80%;
+      
         
         
     }
+    .card{
+        margin-top: 2rem
+    }
     .cards p{
-        font-size: 10px;
+        font-size: 13px;
         width: 80%;
     }
     .our h2{
@@ -204,7 +229,7 @@ line-height: 26px;
     }
     .our p{
         width: 80%;
-        font-size: 10px;
+        font-size: 13px;
     }
     .rating{
         display: flex;
@@ -217,7 +242,7 @@ line-height: 26px;
     width: 80%;
    }
    .rating p{
-    font-size: 10px;
+    font-size: 12px;
     width: 80%;
    }
    .footer{

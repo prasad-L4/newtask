@@ -5,13 +5,15 @@ import head from "../Images/head.jpg";
 import card1 from "../Images/card1.png";
 import card2 from "../Images/card2.png";
 import card3 from "../Images/card3.png";
+import { cards } from "./cards";
 const Home = () => {
+  const [data, setdata] = useState(cards);
   return (
     <>
       <main>
         <section>
           <div className="icon text-white flex justify-end">
-            < IoCloseOutline className="rotate-icon"/>
+            <IoCloseOutline className="rotate-icon" />
           </div>
           <div className="head w-[100%] flex justify-center  align-middle text-center mt-10">
             <h2>
@@ -21,7 +23,7 @@ const Home = () => {
             <div className="flex justify-center align-middle mt-[3rem]">
               <img className="w-[ 1415px] h-[ 500px]" src={head} alt="" />
             </div>
-            <p className="text-white flex justify-center align-middle text-center px-28 mt-[3rem] flex-wrap">
+            <p className=" text-white flex justify-center align-middle text-center px-28 mt-[3rem] flex-wrap">
               Create, play, and battle with friends for free in Fortnite. Be the
               last player standing in Battle Royale and Zero Build, experience a
               concert or live event, or discover over a million creator made
@@ -33,27 +35,12 @@ const Home = () => {
             <button className="btn">Visit Website</button>
           </div>
           <div className="cards mt-[5rem]">
-            <div className="card">
-              <img src={card1} alt="" />
-              <p>
-                Explore large, destructible environments where no two games are
-                ever the same.
-              </p>
-            </div>
-            <div className="card">
-              <img src={card2} alt="" />
-              <p>
-                Explore large, destructible environments where no two games are
-                ever the same.
-              </p>
-            </div>
-            <div className="card">
-              <img src={card3} alt="" />
-              <p>
-                Explore large, destructible environments where no two games are
-                ever the same.
-              </p>
-            </div>
+            {data.map((item, index) => (
+              <div className="card">
+                <img src={item.image} alt="" />
+                <p>{item.text}</p>
+              </div>
+            ))}
           </div>
           <div className="our flex flex-col flex-wrap text-cente  align-middle mt-[3rem]">
             <h2>Our Contribution</h2>
@@ -74,7 +61,9 @@ const Home = () => {
               </div>
               <div>
                 <h1>$500M</h1>
-                <p>Revenue Surge for an <br /> Platform</p>
+                <p>
+                  Revenue Surge for an <br /> Platform
+                </p>
               </div>
               <div>
                 <h1>10x</h1>
@@ -87,11 +76,12 @@ const Home = () => {
               <h2 className="text-[45px]">
                 Interested in delving deeper into the project?
               </h2>
-              <p>
-                If you'd like to explore further details about our <br /> initiatives
-                or any of our affiliated brands, don't hesitate to connect. You
-                can reach out to us via <br /> email at <span className="">hello@abc.com </span>or
-                give us a call at <span> +91 480 20802730.</span>
+              <p className="">
+                If you'd like to explore further details about our <br />{" "}
+                initiatives or any of our affiliated brands, don't hesitate to
+                connect. You can reach out to us via <br /> email at{" "}
+                <span className="">hello@abc.com </span>or give us a call at{" "}
+                <span> +91 480 20802730.</span>
               </p>
               <div className=" flex flex-wrap justify-center gap-3 mt-[4rem] ">
                 <button className="ft-btn1">Ring us on Skype</button>
